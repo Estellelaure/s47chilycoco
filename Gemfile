@@ -4,7 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.8"
+# gem "rails", "~> 7.0.8"
+gem "rails", "~> 7.1.0"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -13,7 +14,8 @@ gem "sprockets-rails"
 gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+# gem "puma", "~> 5.0"
+gem 'puma', '< 7'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -47,6 +49,17 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+gem 'spree' # core and API
+gem 'spree_backend' # Rails admin panel (optional)
+gem 'spree_emails' # transactional emails (optional)
+gem 'spree_sample' # dummy data like products, taxons, etc
+gem 'spree_auth_devise', '~> 4.3' # Devise integration (optional)
+gem 'spree_gateway', '~> 3.9' # payment gateways eg. Stripe, Braintree (optional)
+gem 'spree_i18n', '~> 5.0' # translation files (optional)
+
+# only needed for MacOS and Ruby 3.0
+gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
