@@ -10,6 +10,9 @@ gem "rails", "~> 7.1.0"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Gemfile
+gem 'webpacker', '~> 5.0'
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -22,6 +25,7 @@ gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
+gem "jsbundling-rails" # Ajouté par EK pour le frontend
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -52,6 +56,7 @@ gem "bootsnap", require: false
 
 gem 'spree' # core and API
 gem 'spree_backend' # Rails admin panel (optional)
+gem 'spree_frontend' #Ajouté par EK pour récupérer l'ancien frontend
 gem 'spree_emails' # transactional emails (optional)
 gem 'spree_sample' # dummy data like products, taxons, etc
 gem 'spree_auth_devise', '~> 4.3' # Devise integration (optional)
