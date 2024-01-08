@@ -119,6 +119,8 @@ GEM
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
     cancancan (3.5.0)
+    canonical-rails (0.2.15)
+      actionview (>= 4.1, <= 7.2)
     capybara (3.39.2)
       addressable
       matrix
@@ -250,8 +252,6 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.7.0)
-    nokogiri (1.15.5-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -262,7 +262,7 @@ GEM
     psych (5.1.1.1)
       stringio
     public_suffix (5.0.4)
-    puma (6.4.0)
+    puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (3.0.8)
@@ -415,6 +415,21 @@ GEM
     spree_extension (0.1.0)
       activerecord (>= 4.2)
       spree_core
+    spree_frontend (4.7.0)
+      babel-transpiler (~> 0.7)
+      bootstrap (~> 4.0)
+      canonical-rails (~> 0.2, >= 0.2.10)
+      flag-icons-rails (~> 3.4)
+      glyphicons (~> 1.0)
+      inline_svg (~> 1.5)
+      jquery-rails (~> 4.3)
+      jsbundling-rails
+      responders
+      sass-rails (>= 5)
+      spree_api (>= 4.7.0)
+      spree_core (>= 4.7.0)
+      sprockets (~> 4.0)
+      turbo-rails
     spree_gateway (3.10.0)
       spree_core (>= 3.7.0)
       spree_extension
@@ -480,7 +495,6 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
-  x86_64-darwin-22
   x86_64-linux
 
 DEPENDENCIES
@@ -489,6 +503,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  jsbundling-rails
   pg (~> 1.1)
   puma (< 7)
   rails (~> 7.1.0)
@@ -498,6 +513,7 @@ DEPENDENCIES
   spree_auth_devise (~> 4.3)
   spree_backend
   spree_emails
+  spree_frontend
   spree_gateway (~> 3.9)
   spree_i18n (~> 5.0)
   spree_sample
